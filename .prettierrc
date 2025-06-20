@@ -1,0 +1,19 @@
+{
+  "singleQuote": false,
+  "semi": true,
+
+  "tabWidth": 2,
+  "printWidth": 80,
+  "vueIndentScriptAndStyle": false,
+  "htmlWhitespaceSensitivity": "css",
+  "endOfLine": "lf",
+  "overrides": [
+    {
+      "files": "*.vue",
+      "options": {
+        "parser": "vue",
+        "vueIndentScriptAndStyle": false
+      }
+    }
+  ]
+}
