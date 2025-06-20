@@ -25,7 +25,6 @@ const mutations = {
     state.error = error;
   },
   setQuantity(state, { product, quantity }) {
-    console.log(product, quantity);
     const productIndex = state.products.findIndex((p) => p.id === product.id);
     if (productIndex !== -1) {
       state.products[productIndex].quantity = quantity;

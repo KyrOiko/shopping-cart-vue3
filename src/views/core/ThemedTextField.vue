@@ -14,7 +14,6 @@ export default {
   computed: {
     isValid() {
       if (this.value.length === 0 || this.rules === null) {
-        console.log("no rules");
         return true;
       }
       return this.rules.validate(this.value);

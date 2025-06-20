@@ -133,9 +133,7 @@ export default {
   },
   watch: {
     success(newVal) {
-      console.log(newVal);
       if (newVal) {
-        console.log(this.$refs);
         this.$refs.snackbar.showSnackbar();
       }
     },

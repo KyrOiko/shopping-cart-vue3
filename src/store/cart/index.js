@@ -33,7 +33,6 @@ const getters = {
   groupedCartItems(state) {
     const groupedItems = {};
     state.cartItems.forEach((item) => {
-      console.log(item);
       if (!groupedItems[item.id]) {
         groupedItems[item.id] = {
           ...item,
@@ -75,7 +74,6 @@ const mutations = {
     state.cartItems = cartItems;
   },
   setCouponCode(state, couponCode) {
-    console.log(couponCode);
     state.couponCode = couponCode;
   },
 };
@@ -98,7 +96,6 @@ function _handleCoupon(grossItemCost, couponCode) {
     return _handleILikeApplesCoupon(grossItemCost, apples);
   }
   if (couponCode === "GREEN") {
-    console.log(state.cartItems);
     const pears = state.cartItems.filter((item) => item.name.includes("Pear"));
     const avocados = state.cartItems.filter((item) =>
       item.name.includes("Avocado")

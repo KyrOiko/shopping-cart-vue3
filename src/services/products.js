@@ -9,7 +9,6 @@ class ProductsService {
   async getProducts() {
     try {
       const response = await axios.get(`${this.baseUrl}/products`);
-      await new Promise((resolve) => setTimeout(resolve, 2000));
       return response.data.products.map((product) => ({
         ...product,
         price: convertCentsToEuros(product.price),
